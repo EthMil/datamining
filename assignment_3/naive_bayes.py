@@ -107,12 +107,15 @@ def classify(training, testing):
 	accuracy = get_accuracy(frequency_table, testing_set)
 	return accuracy
 
+def main():
+        if(len(sys.argv)==3):
+                training_file = sys.argv[1]
+                testing_file = sys.argv[2]
+        else:
+                training_file = "carTraining.data"
+                testing_file = "carTesting.data"
+        accuracy = classify(training_file,testing_file)
+        print "Accuracy:", accuracy
 
-if(len(sys.argv)==3):
-	training_file = sys.argv[1]
-	testing_file = sys.argv[2]
-else:
-	training_file = "carTraining.data"
-	testing_file = "carTesting.data"
-accuracy = classify(training_file,testing_file)
-print "Accuracy:", accuracy
+if __name__ == "__main__":
+        main()
