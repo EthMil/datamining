@@ -97,13 +97,6 @@ def classify(training, testing):
 		testing_set = testing
 	table = condition_table(training_set)
 	frequency_table = frequency(table)
-
-	if __name__ == "__main__":
-                for category in table:
-                        print "Class = ",category 
-                        for attribute in table[category]:
-                                print "\t",attribute,"=", table[category][attribute]
-
 	accuracy = get_accuracy(frequency_table, testing_set)
 	return accuracy
 
