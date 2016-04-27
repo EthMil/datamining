@@ -227,7 +227,7 @@ train_out=salary2[train_idx]
 
 import time
 
-clf = svm.SVC(kernel='linear')
+clf = svm.SVC(kernel='rbf')
 libsvm_start=time.time()
 
 clf.fit(train_samples, train_out)
